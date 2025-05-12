@@ -253,8 +253,9 @@
 
 .seperator {
   background-color: rgba(255, 255, 255, 0.344);
-  width: 2px;
+  width: 1px;
   height: 22px;
+  visibility: hidden;
 }
 
 .our-vision {
@@ -353,6 +354,13 @@
   line-height: 1.4;
 }
 
+.mobile-separator{
+  width: 100%;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #f633cc);
+  height: 6px;
+  display: none;
+}
+
 /* Tablets and below */
 @media screen and (max-width: 768px) {
   .container {
@@ -370,6 +378,10 @@
     display: none;
   }
 
+  .seperator {
+   visibility:visible;
+}
+
   .content {
     width: 100%;
     padding-inline: 0;
@@ -386,10 +398,32 @@
 
   .tech-title {
     width: 100%;
+    text-align: center;
+  }
+
+  .tech{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tech > img{
+    height: 32px;
   }
 
   .tech-title > p {
     font-size: 32px;
+  }
+
+  .visionconten > h2{
+    font-size: 28px;
+  }
+
+  .items{
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
   }
 
   .my-tech {
@@ -428,8 +462,37 @@
   }
 
   .features {
-    grid-template-columns: repeat(2, 1fr);
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
+
+
+  .mobile-separator{
+    width: 100%;
+    background: linear-gradient(90deg, #ff6a00, #ee0979, #f633cc);
+    height: 6px;
+    display: block;
+  }
+
+  .myappstore{
+    margin-top: 32px;
+  }
+
+  .my-tech{
+    margin-top: 10px;
+  }
+
+  .our-vision{
+    margin-top: 12px;
+  }
+
+  .content > p{
+    font-size: 16px;
+  }
+
 
   .contactus {
     padding-inline: 24px;
