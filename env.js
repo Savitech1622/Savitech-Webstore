@@ -1,0 +1,2 @@
+export const SUPABASE_URL = 'https://fvpuprgmjiufdveljait.supabase.co';
+export const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ2cHVwcmdtaml1ZmR2ZWxqYWl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxMzQ2OTAsImV4cCI6MjA2MjcxMDY5MH0.4ejLkP5o-OE80X2x0rQtZ2GpZ1Nso4NqkMvM-UH0yDg';
