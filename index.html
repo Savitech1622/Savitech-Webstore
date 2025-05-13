@@ -6,6 +6,7 @@
     <title>Savitech</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
     <div class="container">
@@ -41,6 +42,18 @@
             <div class="bhaktimala">
                 <div class="phone-wrapper">
                     <img  class="phone-frame" src="images/Group 5.png" alt="">
+                    <div class="app-info">
+                        <img  class="app-logo" src="images/Group 6.png" alt="">
+                        <div class="app-info-content">
+                            <h2>Bhakti Mala</h2>
+                            <p>100 MB</p>
+                            <div class="app-info-imp">
+                                <div class="downloadcount counters"><i class="fa-solid fa-file-arrow-down"></i><p id="downloadcounter_bm"> </p></div>
+                                <!-- <div class="seperator"></div>
+                                <div class="ratingcount counters"><i class="fa-solid fa-star"></i><p id="ratingcounter_bm"> </p></div> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="phone-content">
                     <h2><span>Bhakti Mala:</span> Your Devotion Companion</h2>
@@ -59,7 +72,7 @@
                         <pre><i class="fa-brands fa-android"></i>  Available For Android</pre>
                     </div>
                         <!-- <button class="download-btn">Download Now : 100 MB</button> -->
-                         <a href="apps/Bhakti Mala.apk" class="download-btn" download>Download Now : 100 MB</a>
+                         <a href="apps/Bhakti Mala.apk" class="download-btn" id="bm_dn_btn_cta" download>Download Now : 100 MB</a>
                 </div>
             </div>
         </div>
@@ -120,10 +133,14 @@
                 <img id="logo" src="images/file_000000003f50622f983cf150785813c8 1.png"/>
             </div>
             <div class="footer-end">
-                <p>Made in india</p>
+                <div class="visited"><i class="fa-solid fa-users"></i><p id="visitedusercount"></p> </div>
                 <p>Copyright Ⓒ2025 Savitech.</p>
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="script.js"></script>
+
 </body>
 </html>

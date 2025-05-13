@@ -13,6 +13,8 @@
   margin-inline: auto;
 }
 
+
+
 .navbar {
   padding-block: 16px;
   display: flex;
@@ -175,6 +177,9 @@
 
 .phone-wrapper {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .phone-frame {
@@ -184,6 +189,78 @@
   margin-inline: auto;
   z-index: 2;
   margin-bottom: 24px;
+}
+
+.visited{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.counters{
+  display: flex;
+  gap: 4px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.662);
+}
+
+.app-info{
+  background-color: rgb(0, 0, 0);
+  height: 96px;
+  width: 320px;
+  position: absolute;
+  z-index: 12;
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  margin-top: 228px;
+  border-radius: 12px;
+  border: 1px solid #ffffff36;
+  padding-block: 12px;
+  padding-inline: 12px;
+}
+
+.app-logo{
+  background-color: white;
+  height: 100%;
+  width: 70px;
+  border-radius: 8px;
+}
+
+.app-info-content{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-block: 2px;
+}
+
+.app-info-content > h2{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.app-info-content > p{
+  font-size: 12px;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.554);
+  font-weight: 300;
+}
+
+.app-info-imp{
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.app-info-imp > .seperator{
+  height: 12px;
+}
+
+.app-info-imp > p{
+  color: #ffffff8a;
+  font-size: 12px;
 }
 
 .phone-content {
