@@ -6,17 +6,17 @@ $(document).ready(async function(){
     var ratingCountForBhaktimala = 0;
 
     $('#downloadcounter_bm').text(downloadCountForBhaktimala);
-    $('#ratingcounter_bm').text(ratingCountForBhaktimala);
-
+    // $('#ratingcounter_bm').text(ratingCountForBhaktimala);
     $('#visitedusercount').text(userCount);
     await showUserCount();
     
     if (!localStorage.getItem("visited")) {
         await updateVisitedUserCount();
         localStorage.setItem("visited", "true");
+        await showUserCount();
     }
     
-    await showUserCount();
+    
     await loadsBhaktiMalaDownloadCounts();
 
     $("#bm_dn_btn_cta").on('click', async function(){
@@ -32,15 +32,15 @@ $(document).ready(async function(){
         try{
             let { data: savitech_webstore_analytics, error } = await supabasejs
             .from('savitech_webstore_analytics')
-            .select('*');
+            .select('*').eq('id', 1).single();
 
             if(error){
                 throw error;
             }
 
-            if(savitech_webstore_analytics.length > 0)
+            if(savitech_webstore_analytics)
             {
-                var users = savitech_webstore_analytics[0].visitors;
+                var users = savitech_webstore_analytics.visitors;
                 userCount = users;
                 $('#visitedusercount').text(userCount);
             }
@@ -74,15 +74,15 @@ $(document).ready(async function(){
         try{
             let { data: savitech_webstore_analytics, error } = await supabasejs
             .from('savitech_webstore_analytics')
-            .select('*').eq('appname', 'BhaktiMala');
+            .select('*').eq('appname', 'BhaktiMala').single();
 
             if(error){
                 throw error;
             }    
 
-            if(savitech_webstore_analytics.length > 0)
+            if(savitech_webstore_analytics)
             {
-                var downloadCountForBhaktimalaVal = savitech_webstore_analytics[0].downloads;
+                var downloadCountForBhaktimalaVal = savitech_webstore_analytics.downloads;
                 downloadCountForBhaktimala = downloadCountForBhaktimalaVal;
                 $('#downloadcounter_bm').text(downloadCountForBhaktimala);
             }
